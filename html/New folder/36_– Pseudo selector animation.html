@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        gap: 20px;
+        background-color: #333;
+      }
+      .transform {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        /* transform: rotate(45deg) scale(2); */
+      }
+
+      .transform:hover {
+        cursor: pointer;
+        /* transition: background-color 1s ease-in-out 1s; */
+        transition: width 4s;
+      }
+      .transform2 {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        transition: width 2s;
+      }
+      .transform2:hover {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transform">
+      <div class="transform2"></div>
+    </div>
+
+    <!-- <button class="btn">Click Me</button> -->
+  </body>
+</html>
