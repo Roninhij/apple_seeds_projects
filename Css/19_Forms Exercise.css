@@ -1,0 +1,80 @@
+body {
+  font-family: sans-serif;
+
+  background-image: url(/apple_seeds_projects/Images/image1.png);
+  background-size: cover no-repeat;
+  padding: 0%;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+.first-one {
+  width: 350px;
+  height: 350px;
+}
+.Create {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+  padding: 20px;
+  margin: 1 auto;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 1;
+}
+input {
+  border-radius: 20px;
+  width: 30vh;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 500px;
+}
+.container-2 {
+  width: 150px;
+  height: 150px;
+}
+.btn {
+  border: none;
+  background-color: #dfd7d7;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.check-point {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  border-radius: 50%;
+  border: 2px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 5%;
+}
+.check-point:checked {
+  background-color: gray;
+}
+[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  border-radius: ;
+  border: 3px solid black;
+}
+.testing-img {
+  height: 540px;
+}
