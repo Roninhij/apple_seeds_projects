@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        overflow: hidden;
+        padding: 0;
+        /* margin: 0; */
+      }
+      .container {
+        font-size: 10px;
+        width: 40em;
+        height: 40em;
+        position: relative;
+      }
+      .sun {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        top: 12.5em;
+        left: 12.5em;
+        background-color: #ffcc00;
+        border-radius: 50%;
+        box-shadow: 0 0 5em white;
+      }
+      .earth,
+      .moon {
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 0.1em 0.1em 00;
+        border-radius: 50%;
+      }
+      .earth {
+        top: 5em;
+        left: 5em;
+        width: 30em;
+        height: 30;
+        animation: orbit 36.5 linear infinite;
+      }
+      .moon {
+        top: 0;
+        right: 0;
+        width: 8em;
+        height: 8em;
+        animation: orbit 2.7 linear infinite;
+      }
+      .earth::before,
+      .moon::after {
+        content: "";
+        position: absolute;
+      }
+      .earth::before {
+        border-radius: 50%;
+        background-color: #72cdfa;
+        top: 2.8em;
+
+        right: 2.8em;
+        width: 3em;
+        height: 3em;
+      }
+      .moon::before {
+        top: 0.8;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: #ccc;
+      }
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sun"></div>
+      <div class="earth">
+        <div class="moon" id="orbit"></div>
+      </div>
+    </div>
+  </body>
+</html>
