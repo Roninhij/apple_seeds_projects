@@ -11,7 +11,7 @@
 
 const namee = "Omar";
 const myAgee = 22;
-console.log("My name is " + namee + " and I am " + myAgee + " years old.");
+console.log(`My name is  ${namee}  and I am ${myAgee}  years old.`);
 
 const fod = "Pizza";
 const colr = "grey";
@@ -28,8 +28,7 @@ console.log(
 
 const a = 10;
 const b = 5;
-const numbers = a + b;
-console.log("The sum of " + a + " and " + b + " is " + numbers);
+// console.log("The sum of " + a + " and " + b + " is " + numbers);
 
 const day = "friday";
 console.log("Today is " + day);
