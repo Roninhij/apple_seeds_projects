@@ -106,7 +106,7 @@ findGamesByDeveloper(
 );
 
 // number 8
-
+console.log("number 8");
 function capitalizeFirstLetter(titles) {
   for (let i = 0; i < titles.length; i++) {
     console.log(titles[i][0].toUpperCase() + titles[i].slice(1));
