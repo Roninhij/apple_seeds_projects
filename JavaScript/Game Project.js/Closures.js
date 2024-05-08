@@ -77,3 +77,52 @@ console.log("");
 console.log("Exercise 3: Implementing Abilities");
 console.log("==================================");
 console.log();
+
+function createAbility(name, power) {
+  return {
+    name,
+    power,
+    useAbility: function () {
+      console.log(`Used ${this.name} ability and its power is ${this.power}`);
+    },
+  };
+}
+let ability1 = createAbility("Fireball", 10);
+ability1.useAbility();
+
+// RPG Game
+// Closures
+// Exercise 4: Handling Enemies
+console.log("");
+console.log("Exercise 4: Handling Enemies");
+console.log("===============================");
+console.log();
+
+function createEnemy(name, health) {
+  return {
+    name,
+    health,
+    attack: function () {
+      console.log(`${this.name} is attacking!`);
+    },
+    reduceHealth: function (damage) {
+      this.health -= damage;
+      if (this.isDefeated()) {
+        console.log(`${this.name} is dead!`);
+      } else {
+        console.log(`${this.name} has ${this.health} health left!`);
+      }
+    },
+    isDefeated: function () {
+      if (this.health <= 0) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  };
+}
+
+let enemy1 = createEnemy("Goblin", 10);
+enemy1.attack();
+enemy1.reduceHealth(5);
