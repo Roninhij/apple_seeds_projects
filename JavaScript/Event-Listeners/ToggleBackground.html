@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Background Color</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <button id="toggleButton">Toggle Background Color</button>
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+  const button = document.getElementById("toggleButton");
+
+  function toggleBackgroundColor() {
+    if (document.body.style.backgroundColor === "black") {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    } else {
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    }
+  }
+
+  button.addEventListener("click", toggleBackgroundColor);
+</script>
+<style>
+  body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  body.dark {
+    background-color: black;
+    color: white;
+  }
+  button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+  }
+</style>

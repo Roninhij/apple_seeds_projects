@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive FAQ Section</title>
+    <style>
+      /* Style for the body to set font and background */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        padding: 20px;
+      }
+
+      /* Container for the FAQ items */
+      .faq-container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      /* Style for each FAQ item */
+      .faq-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+        cursor: pointer; /* Cursor changes to pointer on hover */
+      }
+
+      /* Style for the FAQ question */
+      .faq-question {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      /* Initially hide the FAQ answers */
+      .faq-answer {
+        display: none;
+      }
+
+      /* Display the answer when the item is active */
+      .faq-item.active .faq-answer {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Container for all FAQ items -->
+    <div class="faq-container">
+      <!-- Individual FAQ item -->
+      <div class="faq-item" id="faq1">
+        <div class="faq-question">What is the course duration?</div>
+        <div class="faq-answer">The course duration is 6 months.</div>
+      </div>
+      <div class="faq-item" id="faq2">
+        <div class="faq-question">Are there any prerequisites?</div>
+        <div class="faq-answer">
+          Basic understanding of HTML, CSS, and JavaScript is recommended.
+        </div>
+      </div>
+      <div class="faq-item" id="faq3">
+        <div class="faq-question">How much does the course cost?</div>
+        <div class="faq-answer">The course cost is $1000.</div>
+      </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    });
+  });
+</script>
